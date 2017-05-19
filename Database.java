@@ -65,6 +65,8 @@ public class Database extends AppCompatActivity implements View.OnClickListener 
             @Override
             public void onClick(View v) {
                 DatabaseReference dbrefReadValue = db.getReference("turki");
+                edt.clearFocus();
+                layoutlinear.removeAllViews();
                        dbrefReadValue.addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(DataSnapshot dataSnapshot) {
